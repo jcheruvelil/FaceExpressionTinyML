@@ -111,10 +111,6 @@ void loop() {
     TF_LITE_REPORT_ERROR(error_reporter, "Image capture failed.");
   }
 
-    // Debugging: Print input data before invoking
-  // for (int i = 0; i < 10; ++i) {  // Print the first 10 elements as an example
-  //   TF_LITE_REPORT_ERROR(error_reporter, "Input data [%d]: %d", i, input->data.int8[i]);
-  // }
 
   // Run the model on this input and make sure it succeeds.
   if (kTfLiteOk != interpreter->Invoke()) {
